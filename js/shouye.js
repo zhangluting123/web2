@@ -21,7 +21,7 @@ function fun(){
 fun();
 
 function next(){
-	index++;console.log('index='+index);
+	index++;
 	animate(slider,{left:-800*index},function()
 	{
 		if(index==7){
