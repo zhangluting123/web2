@@ -52,18 +52,20 @@ var imgy = document.getElementById('imgy');
 var sa=document.getElementById('sa');
 var sb=document.getElementById('sb');
 console.log(sa);
-z1.children[0].onclick=function(){
+function mouse1(){
 	z1.children[0].setAttribute('id','picture');
 	z1.children[1].removeAttribute('id','picture');
 	imgx.src='img/pp0.jpeg';
 	imgy.src='img/pp0.jpeg';
 }
-z1.children[1].onclick=function(){
+function mouse2(){
 	z1.children[1].setAttribute('id','picture');
 	z1.children[0].removeAttribute('id','picture');
 	imgx.src='img/pp1.jpeg';
 	imgy.src='img/pp1.jpeg';
 }
+z1.children[0].onmouseover=mouse1;
+z1.children[1].onmouseover=mouse2;
 function change(){
 	if(z1.children[1].id=='picture'){
 		z1.children[0].setAttribute('id','picture');
